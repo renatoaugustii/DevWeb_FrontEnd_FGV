@@ -1,0 +1,52 @@
+
+
+body{
+    background-color: #EEEEEE;
+}
+
+.container{
+    background-color: white;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+td a :hover{
+    transform: scale(1.1);
+}
+
+td p{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+td h3{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+td img{
+    padding-left: 100px;
+    background-color: white;
+    display:flex;
+    width:250px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-text img {
+    width: 50px; 
+    margin-right: 10px; 
+}
+
+#imagem_produto{
+    padding-left: 100px;
+    display:flex;
+    width:250px;
+}
