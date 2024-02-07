@@ -29,7 +29,7 @@ Utilizando o Replit, um ambiente de desenvolvimento on-line, gratuito e colabora
 ### Desenvolvimento
 O desenvolvimento inclui as seguintes etapas:
 
-1. Estruturação do layout das páginas com HTML; '1° Commit'
+1. Estruturação do layout das páginas com HTML; '1° Commit' : "31d79db"
     - Criação do arquivo Readme.md
     - Criação do arquivo index.html que será o arquivo incial desse projeto.
     - Criação das pastas para organizar as imagens. Subpastas com imagens das ferramentas e imagem do favicon e logotipo.
@@ -38,7 +38,18 @@ O desenvolvimento inclui as seguintes etapas:
     - Criação de página auxiliar para 1 único produto apenas como teste de navegação. A ideia no futuro é ter apenas 1 única página para apresentar os produtos.
 
 2. Aplicação da folha de estilos; '2° Commit'
+    - Importação dos links CDN do Bootstrap, estilos e javascript.
+    - Importacao do CDN de icones do bootstrap.
+    - Imagens das ferramentas adicionadas ao template HTML.
+    - Importação de modelo carrousel do Botstrap.
+    - Importação de fonte ROBOTO para body.
+    - Inserindo imagens para o Banner do carrousel.
+    - Criação da página detalhe, que será responsável por exibir as ferramentas em páginas individualizadas.
+    - Todos os links da página index levam para a página detalhe de uma única ferramenta, irei deixar dinâmico com o recurso do Vue.js.
+
 3. Montagem de cardápio via arquivo; '3° Commit'
+
+
 4. Filtragem dos produtos via busca por palavras-chave ou categorias. '4° Commit'
 
 ## Funcionalidades

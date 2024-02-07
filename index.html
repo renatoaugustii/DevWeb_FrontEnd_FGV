@@ -1,80 +1,311 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-br" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Ferramentas</title>
     <link rel="icon" href="img/icons/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
+    <title>Carousel Template · Bootstrap v5.3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- CSS Customizado -->
+    <link href="css/carousel.css" rel="stylesheet">
 </head>
 <body>
+    
+<header data-bs-theme="dark">
+  
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    
+    <div class="container-fluid">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <i class="bi bi-wrench-adjustable fs-2 me-3"></i>
+            <span class="fs-4">Loja Essencial</span>
+          </a>
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="container  d-flex justify-content-end align-items-center">
+              <a href=""  style="text-decoration: none; color: white;">
+                <p>Televendas (31) 9 9999-9999<i class="bi bi-whatsapp  fs-4 ms-3" style= "color: 	#25d366;"></i> </p>
+              </a>
+      </div>
+    </div>
+    
+  </nav>
+  
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img\imagens\Banner3.png" class="d-block w-100" alt="Descrição da Imagem">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Ferramentas manuais</h1>
+            <p> <h3>Deixe a precisão e o poder das mãos guiarem seu trabalho, dando vida às suas ideias com confiança e excelência!</h3> </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item ">
+        <img src="img\imagens\Banner2.png" class="d-block w-100" alt="Descrição da Imagem">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Marcenaria completa</h1>
+            <p> <h3>Explore a arte da marcenaria com instrumentos que elevam sua criatividade e precisão a novos patamares.</h3></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img\imagens\banner1.png" class="d-block w-100" alt="Descrição da Imagem">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Ferramentas da Manutenção</h1>
+            <p> <h3>Prepare-se para uma jornada de confiança na estrada, equipado com as ferramentas certas para cada desafio automotivo.</h3> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container marketing">
+        
+    <div class="nav-scroller py-1 mb-5 border-bottom ">
+      <nav class="nav nav-underline justify-content-between">
+        <a class="nav-item nav-link link-body-emphasis active" href="#">Ferramentas</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Automotivo</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Jardim</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Eletroportáteis</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Casa e Lazer</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Construção Civil</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Agrícolas</a>
+        <a class="nav-item nav-link link-body-emphasis" href="#">Mais Vendidos</a>
+      </nav>
+    </div>
     <div class="container">
-        <div class="logo-text">
-            <img src="img/icons/logo.png" alt="Logo da Loja Essencial">
-            <h1>Loja Essencial - As melhores marcas</h1>
+        <div class="row mb-3">
+            <div class="col-4">
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-5">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar Produto" aria-label="Search">
+                    <button class="btn btn-outline-success " type="submit"> <i class="bi bi-search"></i></button>
+                </form>
+            </div>
         </div>
 
-        <table class="tabela">
-            <tr>
-                <td>
-                    <a href="produtos/chaveBit.html"><img src="img/imagens/bitKey.png" alt="teste"></a>
-                    <h3>Chave Bit</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/circularSaw.png" alt="teste"></a>
-                    <h3>Serra Circular Bosch</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/CircularSaww.png" alt="teste"></a>
-                     <h3>Serra Circular Dewalt</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/imagens/grassTrimmer.png" alt="teste"></a>
-                     <h3>Aparador de grama</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/marbleSaw.png" alt="teste"></a>
-                     <h3>Serra mármore</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/pliers.png" alt="teste"></a>
-                     <h3>Alicate de pressão</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/imagens/pushcart.png" alt="teste"></a>
-                     <h3>Carrinho de mão</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/screwdriver.png" alt="teste"></a>
-                     <h3>Furadeira</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/Screw.png" alt="teste"></a>
-                     <h3>Chave de fenda</h3>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#"><img src="img/imagens/Shovel.png" alt="teste"></a>
-                     <h3> Pá</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/Toolbox.png" alt="teste"></a>
-                     <h3>Caixa de ferramentas</h3>
-                </td>
-                <td>
-                    <a href="#"><img src="img/imagens/Washer.png" alt="teste"></a>
-                     <h3>Lavadora de pressão</h3>
-                </td>
-            </tr>
-            
         
-        </table>
-    </div>
-</body>
+        <hr>
+        <div class="row mb-3">
+          <div class="col-4">
+            <div class="card mb-2 h-100">
+                <img src="img\imagens\tool1.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">  Serra Circular <strong>DEWALT</strong></h5>
+                    <p class="card-text">
+                      A Serra Circular DEWALT proporciona desempenho robusto, cortes precisos e durabilidade excepcional, ideal para profissionais de marcenaria.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 899,00</strong></span>
+                    </div>
+                    <div class="card-footer ">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2 h-100">
+                <img src="img\imagens\tool2.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Chave de Grifo <strong>VONDER</strong> </h5>
+                    <p class="card-text">Ferramenta versátil ajustável para apertar e afrouxar objetos cilíndricos, como tubos, oferecendo robustez e praticidade profissional.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 59,90</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2 h-100">
+                <img src="img\imagens\tool3.jpg" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Jogo de Soquete <strong>GEDORE</strong> </h5>
+                    <p class="card-text">Jogo de soquete versátil e durável, essencial para diversas aplicações, proporcionando praticidade e eficiência profissional.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 899,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">
+            <div class="card mb-2  h-100">
+                <img src="img\imagens\tool4.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Máquina de Furar <strong>BOSCH</strong> </h5>
+                    <p class="card-text">Potente e confiável, a furadeira Bosch oferece precisão e desempenho excepcionais para projetos variados.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 580,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2">
+                <img src="img\imagens\tool5.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Chave de Fenda <strong>TRAMONTINA</strong> </h5>
+                    <p class="card-text">Chave de fenda, ferramenta essencial para apertar e soltar parafusos, oferecendo precisão e versatilidade em trabalhos variados.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 29,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2">
+                <img src="img\imagens\tool6.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Carrinho de Mão <strong>VONDER</strong> </h5>
+                    <p class="card-text">Carrinho robusto, ideal para transporte eficiente de carga, proporcionando praticidade e resistência em diversas atividades.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 199,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">
+            <div class="card mb-2">
+                <img src="img\imagens\tool7.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Alicate de Pressão <strong>GEDORE</strong> </h5>
+                    <p class="card-text">Alicate versátil de pressão, ferramenta essencial para fixar objetos com firmeza, garantindo precisão e facilidade em ajustes.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 59,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2">
+                <img src="img\imagens\tool8.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Serra mármore <strong>BOSCH</strong> </h5>
+                    <p class="card-text">Serra mármore potente, projetada para cortes precisos em materiais como mármore e cerâmica, proporcionando eficiência e qualidade.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 299,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card mb-2">
+                <img src="img\imagens\tool9.png" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Arco Serra <strong>STARRET</strong> </h5>
+                    <p class="card-text">Arco de serra resistente, ideal para cortes precisos em diferentes materiais, oferecendo versatilidade e controle no manuseio.</p>
+                    <div class="mb-2">
+                        <span class="font-bold"><strong>R$ 89,00</strong></span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    
+        <hr>
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container text-center mt-3">
+     <p>&copy; 2024 FGV - Renato Augusto</p>
+  </footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    </body>
 </html>
