@@ -16,6 +16,8 @@
     <!-- CSS Customizado -->
     <link href="css/carousel.css" rel="stylesheet">
     <script src="js/loadJson.js"></script>
+    <!-- Importacao do CDN do VUE -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
 </head>
 <body>
     
@@ -89,40 +91,52 @@
   </div>
 
   <div class="container marketing">
-        
-    <div class="nav-scroller py-1 mb-5 border-bottom ">
-      <nav class="nav nav-underline justify-content-between">
-        <a class="nav-item nav-link link-body-emphasis active" href="#">Ferramentas</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Automotivo</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Jardim</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Eletroportáteis</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Casa e Lazer</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Construção Civil</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Agrícolas</a>
-        <a class="nav-item nav-link link-body-emphasis" href="#">Mais Vendidos</a>
-      </nav>
-    </div>
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col-4">
-            </div>
-            <div class="col-3">
-            </div>
-            <div class="col-5">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar Produto" aria-label="Search">
-                    <button class="btn btn-outline-success " type="submit"> <i class="bi bi-search"></i></button>
-                </form>
-            </div>
-        </div>
 
-        
-        <hr>
-        <div class="row mb-3" id="toolListContainer">
-          <!-- Os cards de ferramentas ficarao aqui -->
-        </div>    
-        <hr>
-  </div><!-- /.container -->
+    <div class="row mb-3" id="app">
+      <div class="col-4">
+      </div>
+      <div class="col-3">
+      </div>
+      <div class="col-5 ">
+        <form class="d-flex" role="search">
+          <div class="input-group mb-4">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="bi bi-search"></i>
+            </span>
+            <input class="form-control me-2" type="search" v-model="searchTerm" placeholder="Buscar Produto" aria-label="Search">
+          </div>
+        </form>
+      </div>
+    
+      <hr>
+      <div class="row mb-3">
+        <!-- Os cards de ferramentas ficarão aqui -->
+        <div v-if="filteredItems.length > 0" class="col-4 mb-3" v-for="item in filteredItems" :key="item.id">
+          <div class="card mb-2 h-100">
+            <img :src="item.image" class="card-img-top" style="max-height: 300px; max-width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}} <strong>{{item.marca}}</strong></h5>
+              <p class="card-text">{{item.descricao}}</p>
+              <div class="mb-2">
+                <p><strong class="text-secondary">De:</strong> <del><span class="font-bold text-secondary"><strong>{{item.preco_antigo}}</strong></span></del></p>
+                <span class="font-bold"><strong> Por: {{item.preco_venda}}</strong></span>
+              </div>
+              <div class="card-footer">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-6 d-flex justify-content-center">
+                    <a :href="'detalhe.html?id=' + item.id" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else class="col-12 text-center">
+          <p>Nenhum produto encontrado.</p>
+        </div>
+      </div>
+      <hr>
+    </div><!-- /.container -->
 
 
   <!-- FOOTER -->
@@ -133,54 +147,45 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 <script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        items: [], // Array para armazenar os itens do JSON
+        searchTerm: '' // Termo de busca
+      };
+    },
+    computed: {
+  filteredItems() {
+    // Filtrar itens com base no termo de busca
+    return this.items.filter(item =>
+      item.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      item.marca.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      item.descricao.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  }
+},
+       mounted() {
+      // Use a função fetch para obter os dados do arquivo JSON
+      fetch('ToolList.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data && data.length > 0) {
+          this.items = data; // Atualize o array de itens com os dados do JSON
+        } else {
+          // Se o JSON estiver vazio, exiba uma mensagem
+          alert("O JSON está vazio. Insira dados no JSON ou volte mais tarde.");
+        }
+        })
+        .catch(error => {
+          console.error('Erro ao obter dados do JSON:', error);
+          alert("Arquivo Json em Erro, Verifique o nome do arquivo!");
+        });
+    }
+  });
+  
+  app.mount('#app');
+  
+  </script>
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Load tool data from ToolList.json file using fetch
-  fetch('ToolList.json')
-    .then(response => response.json())
-    .then(toolData => {
-      // Function to generate HTML for a single tool card
-      function generateToolCard(tool) {
-        return `
-          <div class="col-4 mb-3">
-            <div class="card mb-2 h-100">
-              <img src="${tool.image}" class="card-img-top" style="max-height: 300px; max-width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">${tool.name} <strong>${tool.marca}</strong></h5>
-                <p class="card-text">${tool.descricao}</p>
-                ${
-                  tool.preco_antigo ? 
-                  `<div class="mb-2">
-                    <del>${tool.preco_antigo}</del>
-                  </div>` 
-                  : ''
-                }
-                <div class="mb-2">
-                  <span class="font-bold"><strong>${tool.preco_venda}</strong></span>
-                </div>
-                <div class="card-footer ">
-                  <div class="row d-flex justify-content-center">
-                    <div class="col-md-6 d-flex justify-content-center">
-                      <a href="detalhe.html" type="button" class="btn btn-outline-primary">Ver Detalhes</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      // Iterate over each tool and append the generated HTML to the container
-      var toolListContainer = document.getElementById('toolListContainer');
-
-      toolData.forEach(function(tool) {
-        var toolCardHTML = generateToolCard(tool);
-        toolListContainer.innerHTML += toolCardHTML;
-      });
-    })
-    .catch(error => console.error('Error fetching data:', error));
-});
-</script>
     </body>
 </html>

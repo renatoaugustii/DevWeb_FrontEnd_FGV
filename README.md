@@ -47,11 +47,10 @@ O desenvolvimento inclui as seguintes etapas:
     - Criação da página detalhe, que será responsável por exibir as ferramentas em páginas individualizadas.
     - Todos os links da página index levam para a página detalhe de uma única ferramenta, irei deixar dinâmico com o recurso do Vue.js.
 
-3. Montagem de cardápio via arquivo; '3° Commit'
+3. Montagem de lista de feerramentas via arquivo .JSON; '3° Commit': efd6ab0
     -  Criação do arquivo Json com os devidos links das imagens e descrição das ferramentas.
     -  Adicionado o JavaScript responsavel em ler o Json e manipular o DOM com os valores capturados.
     - A pesquisa das ferramentas será realizada pelo Vue.js no proximo commit.
-
 
 4. Filtragem dos produtos via busca por palavras-chave ou categorias. '4° Commit'
 

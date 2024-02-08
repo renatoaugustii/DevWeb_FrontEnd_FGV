@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "name": "Serra Circular",
       "descricao": "A Serra Circular DEWALT proporciona desempenho robusto, cortes precisos e durabilidade excepcional, ideal para profissionais de marcenaria.",
       "preco_venda": "R$ 899,00",
@@ -8,6 +9,7 @@
       "marca": "DEWALT"
     },
     {
+      "id": 2,
       "name": "Chave de Grifo",
       "descricao": "Ferramenta versátil ajustável para apertar e afrouxar objetos cilíndricos, como tubos, oferecendo robustez e praticidade profissional.",
       "preco_venda": "R$ 59,90",
@@ -16,6 +18,7 @@
       "marca": "VONDER"
     },
     {
+      "id": 3,
       "name": "Jogo de Soquete",
       "descricao": "Jogo de soquete versátil e durável, essencial para diversas aplicações, proporcionando praticidade e eficiência profissional.",
       "preco_venda": "R$ 899,00",
@@ -24,6 +27,7 @@
       "marca": "GEDORE"
     },
     {
+      "id": 4,
       "name": "Máquina de Furar",
       "descricao": "Potente e confiável, a furadeira Bosch oferece precisão e desempenho excepcionais para projetos variados.",
       "preco_venda": "R$ 580,00",
@@ -32,6 +36,7 @@
       "marca": "BOSCH"
     },
     {
+      "id": 5,
       "name": "Chave de Fenda",
       "descricao": "Chave de fenda, ferramenta essencial para apertar e soltar parafusos, oferecendo precisão e versatilidade em trabalhos variados.",
       "preco_venda": "R$ 29,00",
@@ -40,6 +45,7 @@
       "marca": "TRAMONTINA"
     },
     {
+      "id": 6,
       "name": "Carrinho de Mão",
       "descricao": "Carrinho robusto, ideal para transporte eficiente de carga, proporcionando praticidade e resistência em diversas atividades.",
       "preco_venda": "R$ 199,00",
@@ -48,6 +54,7 @@
       "marca": "VONDER"
     },
     {
+      "id": 7,
       "name": "Alicate de Pressão",
       "descricao": "Alicate versátil de pressão, ferramenta essencial para fixar objetos com firmeza, garantindo precisão e facilidade em ajustes.",
       "preco_venda": "R$ 59,00",
@@ -56,6 +63,7 @@
       "marca": "GEDORE"
     },
     {
+      "id": 8,
       "name": "Serra mármore",
       "descricao": "Serra mármore potente, projetada para cortes precisos em materiais como mármore e cerâmica, proporcionando eficiência e qualidade.",
       "preco_venda": "R$ 299,00",
@@ -64,6 +72,7 @@
       "marca": "BOSCH"
     },
     {
+      "id": 9,
       "name": "Arco Serra",
       "descricao": "Arco de serra resistente, ideal para cortes precisos em diferentes materiais, oferecendo versatilidade e controle no manuseio.",
       "preco_venda": "R$ 89,00",
