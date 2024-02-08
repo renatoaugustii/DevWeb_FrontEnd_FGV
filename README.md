@@ -37,7 +37,7 @@ O desenvolvimento inclui as seguintes etapas:
     - No HTML criaçao de um cabeçalho simples apenas com a logo e o nome da loja. Criação de tabelas para apresentar as ferramentas e suas devidas contruções.
     - Criação de página auxiliar para 1 único produto apenas como teste de navegação. A ideia no futuro é ter apenas 1 única página para apresentar os produtos.
 
-2. Aplicação da folha de estilos; '2° Commit'
+2. Aplicação da folha de estilos; '2° Commit' : 2b754ad
     - Importação dos links CDN do Bootstrap, estilos e javascript.
     - Importacao do CDN de icones do bootstrap.
     - Imagens das ferramentas adicionadas ao template HTML.
@@ -48,6 +48,9 @@ O desenvolvimento inclui as seguintes etapas:
     - Todos os links da página index levam para a página detalhe de uma única ferramenta, irei deixar dinâmico com o recurso do Vue.js.
 
 3. Montagem de cardápio via arquivo; '3° Commit'
+    -  Criação do arquivo Json com os devidos links das imagens e descrição das ferramentas.
+    -  Adicionado o JavaScript responsavel em ler o Json e manipular o DOM com os valores capturados.
+    - A pesquisa das ferramentas será realizada pelo Vue.js no proximo commit.
 
 
 4. Filtragem dos produtos via busca por palavras-chave ou categorias. '4° Commit'
