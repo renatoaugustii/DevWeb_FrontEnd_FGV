@@ -52,7 +52,14 @@ O desenvolvimento inclui as seguintes etapas:
     -  Adicionado o JavaScript responsavel em ler o Json e manipular o DOM com os valores capturados.
     - A pesquisa das ferramentas será realizada pelo Vue.js no proximo commit.
 
-4. Filtragem dos produtos via busca por palavras-chave ou categorias. '4° Commit'
+4. Filtragem dos produtos via busca por palavras-chave ou categorias. '4° Commit': c53c606
+    - Inserindo Vue via CDN.
+    - Criação do script para renderização do Json dentro do Html utilizando o Vue
+    - Criação da tratativa de erros do arquivo json.
+    - Criação da página detalhes.html com interatividade via url.
+    - Alterado arquivo json inserindo os ids dos produtos.
+    - Filtro realizado utilizando v-model.
+    - Projeto Finalizado.
 
 ## Funcionalidades
 
